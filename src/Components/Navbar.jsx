@@ -23,23 +23,23 @@ const Navbar = () => {
   // const [navbar, setNavBar] = useState(false);
   const menuOptions =[
     {
-      text: 'Home',
+      text: 'Inicio',
       icon: <HomeIcon />,
     },
     {
-      text: 'About',
+      text: 'Nosotros',
       icon: <IfonIcon />,
     },
     {
-      text: 'Testimonial',
+      text: 'Comentarios',
       icon: <CommentRoundedIcon />,
     },
     {
-      text: 'Contact',
+      text: 'Contactanos',
       icon: <PhoneRoundedIcon />,
     },
     {
-      text: 'Cart',
+      text: 'Carrito',
       icon: <ShoppingCartRoundedIcon />,
     },
   ];
@@ -116,6 +116,7 @@ const Navbar = () => {
       </Box>
     </Drawer>
   </nav>
+
 }
 
 export default Navbar

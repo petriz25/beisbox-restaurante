@@ -30,6 +30,8 @@ const BackToTopButton = () => {
                 height: "50px",
                 width: "50px",
                 fontSize: "50px",
+                borderRadius: "50%",
+                justifyContent: "center"
                 }} onClick={scrollUp}>^</button>
         )}
     </div>
