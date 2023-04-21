@@ -22,7 +22,7 @@ const Home = () => {
             Caja de bateo, Billar, Jenga gigante, Deportes en vivo...
           </p>
           <button  className='secondary-button'>
-            Reserva Aqui <FiArrowRight />
+            Reserva Aquí <FiArrowRight />
           </button>
         </div>
         <div className='home-image-container'>

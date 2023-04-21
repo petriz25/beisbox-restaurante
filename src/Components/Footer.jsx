@@ -18,7 +18,6 @@ const Footer = () => {
             <div className='footer-icons'>
                 <a href="https://www.facebook.com/beisbox"><img className='icono-sociales' src={Facebook} alt="" /></a>
                 <a href="https://www.instagram.com/beisbox/"><img className='icono-sociales' src={Instagram} alt="" /></a>
-                <a href="https://twitter.com/beisbox_mx"><img className='icono-sociales' src={Twitter} /></a>
             </div>
         </div>
         <div className='footer-section-two'>

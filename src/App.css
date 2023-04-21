@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* '#EC6E05' naranja
+   '#103595' azul */
+
 * {
     margin: 0;
     padding: 0;
@@ -220,6 +223,7 @@
   }
   .footer-icons {
     margin-top: 2.5rem;
+    display: flex;
   }
   .icono-sociales{
     margin-right: 2rem;
@@ -236,6 +240,7 @@
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    
   }
   .footer-section-columns {
     display: flex;
@@ -275,6 +280,11 @@
     font-size: 1.5rem;
     color: #fe9e0d;
   }
+
+  .testimonials-stars-container{
+    display: flex;
+  }
+
   .testimonial-section-bottom h2 {
     margin-top: 1.5rem;
   }
@@ -431,6 +441,12 @@
       flex-direction: column;
       margin-top: 2rem;
     }
+    @media (max-width: 800px) {
+      .footer-section-two {
+        display: flex;
+      }
+    }
+
     .footer-section-columns {
       margin: 1rem 0rem;
     }

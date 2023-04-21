@@ -18,14 +18,6 @@ const SlideShows = () => {
     const slideshow = useRef(null);
     const intervaloSlideshow = useRef(null);
 
-    const manejarMouseEnter = () => {
-        clearInterval(intervaloSlideshow.current);
-      };
-      
-    const manejarMouseLeave = () => {
-        intervaloSlideshow.current = setInterval(siguiente, 9000);
-      };
-
     const siguiente = () => {
         if(slideshow.current.children.length > 0){
             const primerElemento = slideshow.current.children[0];
@@ -68,12 +60,12 @@ const SlideShows = () => {
     }
 
     useEffect(() => {
-        setInterval(() => {
+        const intervalo =  setInterval(() => {
             siguiente();
-        }, 9000);
+        }, 5000);
 
         // slideshow.current.addEventListener('mouseenter', () => {
-        //     clearInterval(intervaloSlideshow.current);
+        //     clearInterval(intervalo);
         //     console.log('mouseenter');
         // });
         // slideshow.current.addEventListener('mouseleave', () => {
@@ -83,7 +75,7 @@ const SlideShows = () => {
         //     }, 5000);
         // });
     }, []);
-
+    
   return (
     <ContenedorPrincipal>
         <ContenedorSlideshow ref={slideshow}>

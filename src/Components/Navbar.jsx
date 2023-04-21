@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, Link } from 'react';
 import Logo from '../Assets/beis.webp';
 import { BsCart2 } from 'react-icons/bs';
 import { HiOutlineBars3 } from 'react-icons/hi2';
+import MenuCel from './MenuHamburguesa';
 import {
   Box,
   Drawer,
@@ -25,24 +26,35 @@ const Navbar = () => {
     {
       text: 'Inicio',
       icon: <HomeIcon />,
+      href: '#home'
     },
     {
       text: 'Nosotros',
       icon: <IfonIcon />,
+      href: '#about'
     },
     {
       text: 'Comentarios',
       icon: <CommentRoundedIcon />,
+      href: '#testimonials'
     },
     {
       text: 'Contactanos',
       icon: <PhoneRoundedIcon />,
+      href: '#contact'
     },
     {
       text: 'Carrito',
       icon: <ShoppingCartRoundedIcon />,
+      href: '#'
     },
   ];
+
+  const handleMenuClick = (href) => {
+    setOpenMenu(false);
+    const target = document.querySelector(href);
+    target.scrollIntoView({ behavior: 'smooth' });
+  };
 
   // const cambiarNavbar = ()=>{
   //   if(window.scrollY >= 80){
@@ -73,29 +85,31 @@ const Navbar = () => {
         <span></span>
         Nosotros
       </a>
-      <a href="#testimonials">
+      <a href="#coments">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        Comentarios
+        Testimoniales
       </a>
       <a href="#contact">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        Contactanos
+        Contáctanos
       </a>
       {/* <a href="">
         <BsCart2 className='navbar-cart-icon' />
       </a>
       <button className='primary-button'>Bookings Now</button> */}
     </div>
+      
     <div className='navbar-menu-container'>
-      <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
+      {/* <HiOutlineBars3 onClick={() => setOpenMenu(true)} /> */}
+      <MenuCel />
     </div>
-    <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor='right'>
+    {/* <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor='right'>
       <Box 
         sx={{width: 250}}
         role='presentation'
@@ -105,7 +119,7 @@ const Navbar = () => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton>
+                <ListItemButton onClick={() => handleMenuClick(item.href)}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItemButton>
@@ -114,7 +128,7 @@ const Navbar = () => {
           </List>
 
       </Box>
-    </Drawer>
+    </Drawer> */}
   </nav>
 
 }
